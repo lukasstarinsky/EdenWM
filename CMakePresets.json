@@ -1,0 +1,39 @@
+{
+	"version": 6,
+	"configurePresets": [
+		{
+			"name": "Debug",
+			"hidden": true,
+			"binaryDir": "build/Debug",
+			"cacheVariables": {
+				"CMAKE_BUILD_TYPE": "Debug",
+				"CMAKE_EXPORT_COMPILE_COMMANDS": true,
+				"CMAKE_RUNTIME_OUTPUT_DIRECTORY": "${sourceDir}/bin/Debug",
+				"CMAKE_LIBRARY_OUTPUT_DIRECTORY": "${sourceDir}/bin/Debug"
+			}
+		},
+		{
+			"name": "Release",
+			"hidden": true,
+			"binaryDir": "build/Release",
+			"cacheVariables": {
+				"CMAKE_BUILD_TYPE": "Release",
+				"CMAKE_EXPORT_COMPILE_COMMANDS": true,
+				"CMAKE_RUNTIME_OUTPUT_DIRECTORY": "${sourceDir}/bin/Release",
+				"CMAKE_LIBRARY_OUTPUT_DIRECTORY": "${sourceDir}/bin/Release"
+			}
+		},
+		{
+			"name": "Make-Debug",
+			"description": "Debug build using Unix Makefiles",
+			"generator": "Unix Makefiles",
+			"inherits": "Debug"
+		},
+		{
+			"name": "Make-Release",
+			"description": "Release build using Unix Makefiles",
+			"generator": "Unix Makefiles",
+			"inherits": "Release"
+		}
+	]
+}
