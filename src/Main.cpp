@@ -1,8 +1,17 @@
-#include <print>
+#include "EdenWM.hpp"
 
-int main()
+i32 main()
 {
-    std::println("Hello World");
+    try
+    {
+        EdenWM wm {};
+        wm.Run();
 
-    return 0;
+        return EXIT_SUCCESS;
+    }
+    catch (const std::runtime_error& e)
+    {
+        std::println(stderr, "{}", e.what());
+        return EXIT_FAILURE;
+    }
 }
